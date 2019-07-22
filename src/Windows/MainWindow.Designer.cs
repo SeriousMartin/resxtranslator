@@ -64,6 +64,7 @@ namespace ResxTranslator.Windows
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.findNextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.keysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,21 +77,21 @@ namespace ResxTranslator.Windows
             this.removeNonTLFromOpenedTranslationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeNonTLFromAllTranslationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trimWhitespaceFromCellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.licenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyDefaultValuesOnLanguageAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ignoreEmptyResourcesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doNotShowResourcesWithoutAnyTranslationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.markToTranslateOnlyIfDefaultValueIsInBracketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.displayNullValuesAsGrayedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openLastDirectoryOnProgramStartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.storeAndLoadCommentsFromAllLanguageFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.loadAssembliesFromResourcePathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setReferencePathsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.storeAndLoadCommentsFromAllLanguageFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.licenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
@@ -346,6 +347,7 @@ namespace ResxTranslator.Windows
             // 
             this.findToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.findToolStripMenuItem1,
+            this.findNextToolStripMenuItem,
             this.clearSearchToolStripMenuItem});
             this.findToolStripMenuItem.Name = "findToolStripMenuItem";
             resources.ApplyResources(this.findToolStripMenuItem, "findToolStripMenuItem");
@@ -357,6 +359,12 @@ namespace ResxTranslator.Windows
             this.findToolStripMenuItem1.Name = "findToolStripMenuItem1";
             resources.ApplyResources(this.findToolStripMenuItem1, "findToolStripMenuItem1");
             this.findToolStripMenuItem1.Click += new System.EventHandler(this.findToolStripMenuItem1_Click);
+            // 
+            // findNextToolStripMenuItem
+            // 
+            this.findNextToolStripMenuItem.Name = "findNextToolStripMenuItem";
+            resources.ApplyResources(this.findNextToolStripMenuItem, "findNextToolStripMenuItem");
+            this.findNextToolStripMenuItem.Click += new System.EventHandler(this.findNextToolStripMenuItem_Click);
             // 
             // clearSearchToolStripMenuItem
             // 
@@ -444,33 +452,21 @@ namespace ResxTranslator.Windows
             resources.ApplyResources(this.trimWhitespaceFromCellsToolStripMenuItem, "trimWhitespaceFromCellsToolStripMenuItem");
             this.trimWhitespaceFromCellsToolStripMenuItem.Click += new System.EventHandler(this.trimWhitespaceFromCellsToolStripMenuItem_Click);
             // 
-            // helpToolStripMenuItem
+            // settingsToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.helpToolStripMenuItem1,
-            this.licenceToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
-            // 
-            // helpToolStripMenuItem1
-            // 
-            this.helpToolStripMenuItem1.Image = global::ResxTranslator.Properties.Resources.Help;
-            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            resources.ApplyResources(this.helpToolStripMenuItem1, "helpToolStripMenuItem1");
-            this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
-            // 
-            // licenceToolStripMenuItem
-            // 
-            this.licenceToolStripMenuItem.Name = "licenceToolStripMenuItem";
-            resources.ApplyResources(this.licenceToolStripMenuItem, "licenceToolStripMenuItem");
-            this.licenceToolStripMenuItem.Click += new System.EventHandler(this.licenceToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyDefaultValuesOnLanguageAddToolStripMenuItem,
+            this.ignoreEmptyResourcesToolStripMenuItem,
+            this.doNotShowResourcesWithoutAnyTranslationsToolStripMenuItem,
+            this.markToTranslateOnlyIfDefaultValueIsInBracketsToolStripMenuItem,
+            this.displayNullValuesAsGrayedToolStripMenuItem,
+            this.openLastDirectoryOnProgramStartToolStripMenuItem,
+            this.storeAndLoadCommentsFromAllLanguageFilesToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.loadAssembliesFromResourcePathToolStripMenuItem,
+            this.setReferencePathsToolStripMenuItem});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
             // 
             // copyDefaultValuesOnLanguageAddToolStripMenuItem
             // 
@@ -502,6 +498,11 @@ namespace ResxTranslator.Windows
             this.openLastDirectoryOnProgramStartToolStripMenuItem.Name = "openLastDirectoryOnProgramStartToolStripMenuItem";
             resources.ApplyResources(this.openLastDirectoryOnProgramStartToolStripMenuItem, "openLastDirectoryOnProgramStartToolStripMenuItem");
             // 
+            // storeAndLoadCommentsFromAllLanguageFilesToolStripMenuItem
+            // 
+            this.storeAndLoadCommentsFromAllLanguageFilesToolStripMenuItem.Name = "storeAndLoadCommentsFromAllLanguageFilesToolStripMenuItem";
+            resources.ApplyResources(this.storeAndLoadCommentsFromAllLanguageFilesToolStripMenuItem, "storeAndLoadCommentsFromAllLanguageFilesToolStripMenuItem");
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
@@ -518,26 +519,33 @@ namespace ResxTranslator.Windows
             resources.ApplyResources(this.setReferencePathsToolStripMenuItem, "setReferencePathsToolStripMenuItem");
             this.setReferencePathsToolStripMenuItem.Click += new System.EventHandler(this.setReferencePathsToolStripMenuItem_Click);
             // 
-            // settingsToolStripMenuItem
+            // helpToolStripMenuItem
             // 
-            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyDefaultValuesOnLanguageAddToolStripMenuItem,
-            this.ignoreEmptyResourcesToolStripMenuItem,
-            this.doNotShowResourcesWithoutAnyTranslationsToolStripMenuItem,
-            this.markToTranslateOnlyIfDefaultValueIsInBracketsToolStripMenuItem,
-            this.displayNullValuesAsGrayedToolStripMenuItem,
-            this.openLastDirectoryOnProgramStartToolStripMenuItem,
-            this.storeAndLoadCommentsFromAllLanguageFilesToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.loadAssembliesFromResourcePathToolStripMenuItem,
-            this.setReferencePathsToolStripMenuItem});
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem1,
+            this.licenceToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
             // 
-            // storeAndLoadCommentsFromAllLanguageFilesToolStripMenuItem
+            // helpToolStripMenuItem1
             // 
-            this.storeAndLoadCommentsFromAllLanguageFilesToolStripMenuItem.Name = "storeAndLoadCommentsFromAllLanguageFilesToolStripMenuItem";
-            resources.ApplyResources(this.storeAndLoadCommentsFromAllLanguageFilesToolStripMenuItem, "storeAndLoadCommentsFromAllLanguageFilesToolStripMenuItem");
+            this.helpToolStripMenuItem1.Image = global::ResxTranslator.Properties.Resources.Help;
+            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
+            resources.ApplyResources(this.helpToolStripMenuItem1, "helpToolStripMenuItem1");
+            this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
+            // 
+            // licenceToolStripMenuItem
+            // 
+            this.licenceToolStripMenuItem.Name = "licenceToolStripMenuItem";
+            resources.ApplyResources(this.licenceToolStripMenuItem, "licenceToolStripMenuItem");
+            this.licenceToolStripMenuItem.Click += new System.EventHandler(this.licenceToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
@@ -636,6 +644,7 @@ namespace ResxTranslator.Windows
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripMenuItem loadAssembliesFromResourcePathToolStripMenuItem;
         private ToolStripMenuItem setReferencePathsToolStripMenuItem;
+        private ToolStripMenuItem findNextToolStripMenuItem;
     }
 }
 
